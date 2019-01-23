@@ -6,7 +6,7 @@ use Mix.Config
 
 # General application configuration
 config :mx_web,
-  ecto_repos: [MxWeb.Repo],
+  ecto_repos: [MxEcto.Repo],
   generators: [context_app: false]
 
 # Configures the endpoint

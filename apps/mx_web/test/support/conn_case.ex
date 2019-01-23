@@ -27,10 +27,10 @@ defmodule MxWeb.ConnCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(MxWeb.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(MxEcto.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(MxWeb.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(MxEcto.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}
