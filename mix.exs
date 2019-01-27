@@ -15,6 +15,8 @@ defmodule MxTest.MixProject do
   #
   # Run "mix help deps" for examples and options.
   defp deps do
-    []
+    [
+      {:poison, "~> 3.0"}
+    ]
   end
 end
