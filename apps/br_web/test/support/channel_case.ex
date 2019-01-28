@@ -26,10 +26,10 @@ defmodule BrWeb.ChannelCase do
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(BrWeb.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(MxEcto.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(BrWeb.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(MxEcto.Repo, {:shared, self()})
     end
 
     :ok
